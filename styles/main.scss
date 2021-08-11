@@ -1,0 +1,21 @@
+// Shared
+@import './shared/base';
+// Components
+@import './components/asideNav';
+@import './components/header';
+// Pages
+@import './pages/homePage';
+@import './pages/about';
+@import './pages/projects';
+@import './pages/skills';
+@import './pages/contact';
+
+
+
+
+
+
+/* All content container => main element */
+main {
+  flex: 1;
+}

@@ -1,0 +1,51 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/******************* Utility Components ********************/
+:root {
+  font-size: 62.5%;
+
+  /************ Custom Properties ************/
+
+  /* Main Color */
+  --primary-color: #014d4e;
+  /* Secondary Color */
+  --secondary-color: #ff9408;
+  /* Secondary Color Modified */
+  --secondary-color-m: #ff94088e;
+  /* Tertiary color */
+  --tertiary-color: #017374;
+  /* Tertiary color */
+  --tertiary-color-m: #01737498;
+}
+
+.body {
+  font-family: "IBM Plex Sans", sans-serif;
+  line-height: 1.8;
+
+  display: flex;
+}
+
+/* List Items */
+li {
+  list-style: none;
+}
+
+/* Anchor Tags */
+a:link,
+a:visited {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.inline-link:hover,
+.inline-link:active {
+  font-size: 110%;
+}
