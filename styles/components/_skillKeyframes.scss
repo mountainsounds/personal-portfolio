@@ -1,0 +1,174 @@
+/*****************************************************
+********* Frontend Skill Progress Animations *********
+******************************************************/
+
+/** HTML5 & CSS3 **/
+.skills__frontend--progress__1 {
+  animation: frontend-1 7s infinite cubic-bezier(0.5, 0.5, 0.5, 1);
+}
+
+@keyframes frontend-1 {
+  0% { width: 0 }
+
+  60%, 80%, 100% {
+    width: 98%;
+  }
+}
+
+/** JavaScript (ES5 /ES6+) **/
+
+.skills__frontend--progress__2 {
+  animation: frontend-2 7s infinite cubic-bezier(0.5, 0.5, 0.5, 1);
+}
+
+@keyframes frontend-2 {
+  0% { width: 0 }
+
+  60%, 80%, 100% {
+    width: 98%;
+  }
+}
+
+/** React & NextJs **/
+
+.skills__frontend--progress__3 {
+  animation: frontend-3 7s infinite cubic-bezier(0.5, 0.5, 0.5, 1);
+}
+
+@keyframes frontend-3 {
+  0% { width: 0 }
+
+  60%, 80%, 100% {
+    width: 87%;
+  }
+}
+
+/** Sass & Bootstrap **/
+.skills__frontend--progress__4 {
+  animation: frontend-4 7s infinite cubic-bezier(0.5, 0.5, 0.5, 1);
+}
+
+@keyframes frontend-4 {
+  0% { width: 0 }
+
+  60%, 80%, 100% {
+    width: 95%;
+  }
+}
+
+/** JQuery & Pug **/
+.skills__frontend--progress__5 {
+  animation: frontend-5 7s infinite cubic-bezier(0.5, 0.5, 0.5, 1);
+}
+
+@keyframes frontend-5 {
+  0% { width: 0 }
+
+  60%, 80%, 100% {
+    width: 75%;
+  }
+}
+
+/*****************************************************
+********* Backend Skill Progress Animations *********
+******************************************************/
+
+/** NodeJS & Express **/
+.skills__backend--progress__1 {
+  animation: backend-1 7s infinite cubic-bezier(0.5, 0.5, 0.5, 1);
+}
+
+@keyframes backend-1 {
+  0% { width: 0 }
+
+  60%, 80%, 100% {
+    width: 75%;
+  }
+}
+
+/** SQL / MySQL **/
+.skills__backend--progress__2 {
+  animation: backend-2 7s infinite cubic-bezier(0.5, 0.5, 0.5, 1);
+}
+
+@keyframes backend-2 {
+  0% { width: 0 }
+
+  60%, 80%, 100% {
+    width: 80%;
+  }
+}
+
+/** MongoDB **/
+.skills__backend--progress__3 {
+  animation: backend-3 7s infinite cubic-bezier(0.5, 0.5, 0.5, 1);
+}
+
+@keyframes backend-3 {
+  0% { width: 0 }
+
+  60%, 80%, 100% {
+    width: 75%;
+  }
+}
+
+
+/*****************************************************
+********* Other Skill Progress Animations *********
+******************************************************/
+
+/** Git & Github **/
+
+.skills__other--progress__1 {
+  animation: other-1 7s infinite cubic-bezier(0.5, 0.5, 0.5, 1);
+}
+
+@keyframes other-1 {
+  0% { width: 0 }
+
+  60%, 80%, 100% {
+    width: 75%;
+  }
+}
+
+/** Agile, Trello, Social Coding **/
+
+.skills__other--progress__2 {
+  animation: other-2 7s infinite cubic-bezier(0.5, 0.5, 0.5, 1);
+}
+
+@keyframes other-2 {
+  0% { width: 0 }
+
+  60%, 80%, 100% {
+    width: 85%;
+  }
+}
+
+/** VS Code **/
+
+.skills__other--progress__3 {
+  animation: other-3 7s infinite cubic-bezier(0.5, 0.5, 0.5, 1);
+}
+
+@keyframes other-3 {
+  0% { width: 0 }
+
+  60%, 80%, 100% {
+    width: 95%;
+  }
+}
+
+/** Webpack / Snowpack **/
+
+.skills__other--progress__4 {
+  animation: other-4 7s infinite cubic-bezier(0.5, 0.5, 0.5, 1);
+}
+
+@keyframes other-4 {
+  0% { width: 0 }
+
+  60%, 80%, 100% {
+    width: 80%;
+  }
+}

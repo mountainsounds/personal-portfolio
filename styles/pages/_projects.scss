@@ -1,8 +1,74 @@
 #body-projects {
   background-color: var(--secondary-color);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #header-projects, #sideNav-projects {
   background-color: var(--primary-color);
+}
+
+section#work {
+  padding: calc(1rem + 2vw);
+  background-color: var(--secondary-color);
+  color: white;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.work__card {
+  padding: 2vw;
+  flex-basis: 50rem;
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.work__card--img {
+  height: 100%;
+  width: 100%;
+}
+
+.work__card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.35s ease-in-out;
+}
+
+.work__card--content__title {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.work__card--content__para {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.5rem;
+}
+
+.work__card--content {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  width: 80%;
+  background-color: var(--tertiary-color-m);
+  padding: 1.5rem;
+
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.35s ease-in-out;
+}
+
+.work__card:hover .work__card--content,
+.work__card:active .work__card--content {
+  transform: scaleY(1);
+  transform-origin: center;
+}
+
+.work__card:hover .work__card--img img,
+.work__card:active .work__card--img img {
+  transform: scale(0.98);
+  filter: grayscale(50%);
 }

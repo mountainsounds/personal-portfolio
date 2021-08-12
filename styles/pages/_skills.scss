@@ -1,8 +1,29 @@
+
+@import '../components/skillSection';
+@import '../components/skillKeyframes';
+
 #body-skills {
-  background-color: var(--primary-color);
-  height: 100vh;
+  background-color: var(--tertiary-color);
+  min-height: 100vh;
+
+  .side-nav__content--social a {
+    &:hover, &:active { color: var(--primary-color) }
+  }
+
 }
 
 #header-skills, #sideNav-skills {
   background-color: var(--secondary-color);
 }
+
+/********************* Skills Section **************************/
+section#skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: calc(1rem + 2vw);
+  // background-color: var(--tertiary-color);
+}
+

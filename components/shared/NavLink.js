@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
-const NavLink = ({src, name, className}) => {
+const NavLink = ({src, name, cssSelector}) => {
 
   return (
     <li>
       <Link href={src}>
-        <a className={className}>{name}</a>
+        <a id={cssSelector} >{name}</a>
       </Link>
     </li>
   )

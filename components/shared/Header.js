@@ -1,6 +1,9 @@
 import NavLink from './NavLink';
+import clsx from 'clsx';
 
 const Header = ({page}) => {
+
+
 
   return (
     <header className="header" id={`header-${page}`}>
@@ -11,11 +14,11 @@ const Header = ({page}) => {
                 <div className="line line-3"></div>
             </div>
             <ul className="header__main-nav--links">
-              <NavLink src='/' name='Home' />
-              <NavLink src='/about' name='About' />
-              <NavLink src='/skills' name='Skills' />
-              <NavLink src='/projects' name='Projects' />
-              <NavLink src='/contact' name='Contact' />
+              <NavLink cssSelector={clsx(page === 'home' && 'active')} src='/' name='Home' />
+              <NavLink cssSelector={clsx(page === 'about' && 'active')} src='/about' name='About' />
+              <NavLink cssSelector={clsx(page === 'skills' && 'active')} src='/skills' name='Skills' />
+              <NavLink cssSelector={clsx(page === 'projects' && 'active')} src='/projects' name='Projects' />
+              <NavLink cssSelector={clsx(page === 'contact' && 'active')} src='/contact' name='Contact' />
             </ul>
         </nav>
     </header>
