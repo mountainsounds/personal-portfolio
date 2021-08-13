@@ -39,7 +39,7 @@ section#work {
 }
 
 .work__card--content__title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
 }
 
@@ -71,4 +71,40 @@ section#work {
 .work__card:active .work__card--img img {
   transform: scale(0.98);
   filter: grayscale(50%);
+}
+
+
+.exploreBtn:link,
+.exploreBtn:visited {
+  margin: 1rem;
+  padding: .5rem .5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+
+  position: relative;
+  z-index: 1;
+}
+
+.exploreBtn:link::after,
+.exploreBtn:visited::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  z-index: -1;
+}
+
+.exploreBtn:hover::after,
+.exploreBtn:active::after {
+  transform: scaleY(1);
+  transform-origin: top;
 }

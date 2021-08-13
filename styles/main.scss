@@ -8,11 +8,9 @@
 @import './pages/homePage';
 @import './pages/about';
 @import './pages/projects';
+@import './pages/projectDetail';
 @import './pages/skills';
 @import './pages/contact';
-
-
-
 
 
 
@@ -20,4 +18,5 @@
 /* All content container => main element */
 main {
   flex: 1;
+  min-height: 100vh;
 }
