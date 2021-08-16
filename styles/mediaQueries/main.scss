@@ -1,0 +1,14 @@
+/*********************************************************
+********************  Media Queries ***********************
+**********************************************************/
+@import './m-width_460.scss';
+@import './m-width_610.scss';
+
+
+@media screen and (max-width: 900px) {
+  /* Showcase / Hero Section */
+  section#showcase {
+    background-position: 100%;
+    align-items: flex-end;
+  }
+}

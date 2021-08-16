@@ -1,0 +1,21 @@
+@media screen and (max-width: 460px) {
+  /* work */
+  .work__card--content {
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .work__card:hover .work__card--content,
+  .work__card:active .work__card--content {
+    transform-origin: bottom;
+  }
+
+
+}

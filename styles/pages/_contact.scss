@@ -3,12 +3,16 @@
   // min-height: 100vh;
 
   .side-nav__content--social a {
-    &:hover, &:active { color: var(--primary-color) }
+    &:hover, &:active { color: var(--secondary-color) }
   }
 }
 
-#header-contact, #sideNav-contact {
+#header-contact {
   background-color: var(--secondary-color);
+}
+
+#sideNav-contact {
+  background-color: var(--primary-color);
 }
 
 /********************* Contact Section**************************/

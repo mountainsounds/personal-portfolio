@@ -20,13 +20,22 @@ const ProjectDetail = () => {
 
       <section className="project-detail">
       {id &&
-          <div className="project-overview">
-              <h1 className="cover-heading">{project.title}</h1>
-              <p className="lead">{project.description}</p>
-              <p className="projectLinks">
-                  <a href={project.companyWebsite} target="_" className="projectLinks">Visit App</a>
-                  <a href={project.companyWebsite} target="_" className="projectLinks">Source Code</a>
-              </p>
+        <div className="cover-container">
+          <main role="main" className="inner page-cover">
+                <h1 className="cover-heading">{project.title}</h1>
+                <p className="technologies">{project.technologies}</p>
+
+                <div id='projectDescription'>
+                    <p>{project.descriptionLong}</p>
+                    <p>{project.userFeatures}</p>
+                    <p>{project.developmentFeatures}</p>
+                </div>
+
+                <div className="projectLinks">
+                  <a href={project.link} target="_blank" rel="noreferrer" >View Application</a>
+                  <a href={project.sourceCode} target="_blank" rel="noreferrer" >View Source Code</a>
+                </div>
+            </main>
           </div>
       }
 

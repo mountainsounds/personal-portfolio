@@ -57,7 +57,7 @@ class TypeWriter {
 
 // Init App
 export default function init(setCurrentWord) {
-  const words = ['Developer', 'Tech Lover', 'Team Player', 'Climber' ]
+  const words = ['Developer', 'Tech Lover', 'Team Player', 'Outdoor Enthusiast', 'Climber' ]
   const wait = 3000;
   // Init TypeWriter
   new TypeWriter(setCurrentWord, words, wait);

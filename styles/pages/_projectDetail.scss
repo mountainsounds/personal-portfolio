@@ -1,6 +1,10 @@
 #body-projects-detail {
-  background-image: linear-gradient(45deg, #4e54c8 0%, #8f94fb 100%);
+  background-color: var(--primary-color);
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+
+  .side-nav__content--social a {
+    &:hover, &:active { color: var(--primary-color) }
+  }
 }
 
 #header-projects-detail {
@@ -8,14 +12,29 @@
 }
 
 #sideNav-projects-detail {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
 .project-detail {
 
+  .cover-container {
+    max-width: 42em;
+    color: #fff;
+    font-size: 10rem;
+    padding: 0 2rem;
+  }
+
   .cover-heading {
     font-weight: bold;
     font-size: 5rem;
+  }
+
+  .page-cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
 
@@ -26,36 +45,56 @@
     align-items: center;
     text-align: center;
 
-    p {
-      margin: 4rem;
-      font-size: 2rem;
-    }
   }
+}
+
+.technologies {
+    max-width: 800px;
+    font-size: 2.5rem;
+    font-style: italic;
+}
+
+#projectDescription {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 5%;
+  p {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+}
 
 
-    .projectLinks {
+.projectLinks {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
-      a {
-        cursor: pointer;
-        margin: 1rem;
-        padding: .75rem 1.25rem;
-        color: #333;
-        text-shadow: none;
-        background-color: #fff;
-        border: .05rem solid #fff;
+  a {
+    font-size: 2.75rem;
+      cursor: pointer;
+      margin: 1rem;
+      padding: .75rem 1.25rem;
+      text-shadow: none;
+      color: #333;
+      background-color: #fff;
+      border: .05rem solid #fff;
+      border-radius: 4px;
 
-        &:hover {
-          border-color: #333;
-          color: white;
-          background-color: #333;
-        }
+      &:hover {
+        border-color: var(--secondary-color);
+        // background-color: #333;
+        // color: white;
+        background-color: var(--secondary-color);
+        color: whitesmoke;
       }
-
     }
 }
 
+
 .videoOverview {
-  margin: 5rem 2rem;
+  margin-bottom: 5rem;
 }
 
 .videoContainer {
