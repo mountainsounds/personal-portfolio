@@ -18,6 +18,7 @@ const Contact = () => {
     isSuccess ? toast.success(successMsg) : toast.error(errorMsg);
   }
 
+
   function sendEmail(e) {
     e.preventDefault();
 
