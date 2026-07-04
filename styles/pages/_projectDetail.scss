@@ -1,9 +1,12 @@
 #body-projects-detail {
   background-color: var(--primary-color);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
 
   .side-nav__content--social a {
-    &:hover, &:active { color: var(--primary-color) }
+    &:hover,
+    &:active {
+      color: var(--primary-color);
+    }
   }
 }
 
@@ -16,7 +19,6 @@
 }
 
 .project-detail {
-
   .cover-container {
     max-width: 42em;
     color: #fff;
@@ -37,21 +39,19 @@
     text-align: center;
   }
 
-
   .project-overview {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-
   }
 }
 
 .technologies {
-    max-width: 800px;
-    font-size: 2.5rem;
-    font-style: italic;
+  max-width: 800px;
+  font-size: 2.5rem;
+  font-style: italic;
 }
 
 #projectDescription {
@@ -64,7 +64,6 @@
   }
 }
 
-
 .projectLinks {
   margin-top: 2rem;
   display: flex;
@@ -73,25 +72,24 @@
 
   a {
     font-size: 2.75rem;
-      cursor: pointer;
-      margin: 1rem;
-      padding: .75rem 1.25rem;
-      text-shadow: none;
-      color: #333;
-      background-color: #fff;
-      border: .05rem solid #fff;
-      border-radius: 4px;
+    cursor: pointer;
+    margin: 1rem;
+    padding: 0.75rem 1.25rem;
+    text-shadow: none;
+    color: #333;
+    background-color: #fff;
+    border: 0.05rem solid #fff;
+    border-radius: 4px;
 
-      &:hover {
-        border-color: var(--secondary-color);
-        // background-color: #333;
-        // color: white;
-        background-color: var(--secondary-color);
-        color: whitesmoke;
-      }
+    &:hover {
+      border-color: var(--secondary-color);
+      // background-color: #333;
+      // color: white;
+      background-color: var(--secondary-color);
+      color: whitesmoke;
     }
+  }
 }
-
 
 .videoOverview {
   margin-bottom: 5rem;
@@ -108,6 +106,4 @@
     width: 90%;
     height: 500px;
   }
-
-
 }

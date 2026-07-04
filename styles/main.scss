@@ -1,21 +1,19 @@
 // Shared
-@import './shared/base';
+@use "./shared/base";
 // Components
-@import './components/asideNav';
-@import './components/header';
+@use "./components/asideNav";
+@use "./components/header";
 
 // Pages
-@import './pages/homePage';
-@import './pages/about';
-@import './pages/projects';
-@import './pages/projectDetail';
-@import './pages/skills';
-@import './pages/contact';
+@use "./pages/homePage";
+@use "./pages/about";
+@use "./pages/projects";
+@use "./pages/projectDetail";
+@use "./pages/skills";
+@use "./pages/contact";
 
-@import './mediaQueries/main.scss';
-
-
-
+// Media queries load last so their overrides win the cascade.
+@use "./mediaQueries/main" as mediaQueries;
 
 /* All content container => main element */
 main {

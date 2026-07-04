@@ -1,9 +1,8 @@
 /*********************************************************
 ********************  Media Queries ***********************
 **********************************************************/
-@import './m-width_460.scss';
-@import './m-width_610.scss';
-
+@use "./m-width_460";
+@use "./m-width_610";
 
 @media screen and (max-width: 900px) {
   /* Showcase / Hero Section */

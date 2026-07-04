@@ -3,7 +3,8 @@
   min-height: 100vh;
 }
 
-#header-about, #sideNav-about {
+#header-about,
+#sideNav-about {
   background-color: var(--primary-color);
 }
 
@@ -58,7 +59,7 @@ section#about-me {
 
 .about-me__content--para {
   font-size: 1.8rem;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: var(--font-ibm-plex-sans), sans-serif;
   /* font-family: "Indie Flower", cursive; */
   /* font-family: "Baloo Tamma 2", cursive; */
 }
