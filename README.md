@@ -1,34 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# mtnsounds.com — personal portfolio
 
-## Getting Started
+Zack Sawyer's portfolio site. Next.js (pages router) + Sass, deployed on Vercel
+at [mtnsounds.com](https://mtnsounds.com).
 
-First, run the development server:
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Requires Node 18+ locally; production builds pin Node via the `engines` field
+in `package.json`.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Contact form email
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+The contact form posts to `pages/api/contact.js`, which sends a notification
+email through [Resend](https://resend.com) (shared account — mtnsounds.com is
+the verified sending domain). The visitor's address is set as `reply_to`, so
+replying to the notification responds to them directly. A hidden honeypot
+field silently drops bot submissions.
 
-## Learn More
+Configuration (see `.env.local.example`):
 
-To learn more about Next.js, take a look at the following resources:
+| Variable | Purpose |
+| --- | --- |
+| `RESEND_API_KEY` | Resend API key (server-only) |
+| `RESEND_FROM_EMAIL` | Verified from-address, e.g. `Zack Sawyer <notifications@mtnsounds.com>` |
+| `CONTACT_NOTIFY_EMAIL` | Optional override for where messages land (defaults to mountainsounds15@gmail.com; use `delivered@resend.dev` when testing) |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Copy `.env.local.example` to `.env.local` for local development. The same
+variables must be set in the Vercel project for deployed environments.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Deploy
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Pushing to `main` deploys via the Vercel Git integration
+(project: `personal-portfolio`).

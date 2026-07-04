@@ -2,6 +2,9 @@
   "name": "portfolio-final",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -14,8 +17,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
     "clsx": "^1.1.1",
-    "emailjs-com": "^3.2.0",
-    "next": "11.0.1",
+    "next": "12.3.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-toastify": "^8.0.2",
@@ -23,6 +25,6 @@
   },
   "devDependencies": {
     "eslint": "7.32.0",
-    "eslint-config-next": "11.0.1"
+    "eslint-config-next": "12.3.4"
   }
 }
