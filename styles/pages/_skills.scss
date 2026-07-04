@@ -1,18 +1,20 @@
-
-@import '../components/skillSection';
-@import '../components/skillKeyframes';
+@use "../components/skillSection";
+@use "../components/skillKeyframes";
 
 #body-skills {
   background-color: var(--tertiary-color);
   min-height: 100vh;
 
   .side-nav__content--social a {
-    &:hover, &:active { color: var(--primary-color) }
+    &:hover,
+    &:active {
+      color: var(--primary-color);
+    }
   }
-
 }
 
-#header-skills, #sideNav-skills {
+#header-skills,
+#sideNav-skills {
   background-color: var(--secondary-color);
 }
 
@@ -26,4 +28,3 @@ section#skills {
   padding: calc(1rem + 2vw);
   // background-color: var(--tertiary-color);
 }
-

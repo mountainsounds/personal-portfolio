@@ -3,7 +3,10 @@
   // min-height: 100vh;
 
   .side-nav__content--social a {
-    &:hover, &:active { color: var(--secondary-color) }
+    &:hover,
+    &:active {
+      color: var(--secondary-color);
+    }
   }
 }
 
@@ -18,7 +21,7 @@
 /********************* Contact Section**************************/
 section#contact {
   height: 100vh;
-  background-image: url("../../public/background-yosemite.jpeg");
+  background-image: url("/background-yosemite.jpeg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

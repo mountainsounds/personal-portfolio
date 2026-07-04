@@ -15,7 +15,6 @@ ul.header__main-nav--links {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-
 }
 
 ul.header__main-nav--links li {
@@ -68,12 +67,9 @@ ul.header__main-nav--links li a:active::after {
   border-bottom: 3px solid white;
 }
 
-
 #active:hover::before,
 #active:active::before,
 #active:hover::after,
 #active:active::after {
   transform: scaleX(0);
 }
-
-
