@@ -49,7 +49,7 @@ export const projects: Project[] = [
     cardImage: wolkHome,
     cardAlt: "The Wolk for Senate homepage hero",
     overview: [
-      "A campaign website for David S. Wolk, running as an Independent for the Vermont State Senate in Rutland County. I designed and built it end to end: a warm, editorial identity and a compliant donation pipeline that a small campaign can actually run.",
+      "A campaign website for Dave Wolk, running as an Independent for the Vermont State Senate in Rutland County. I designed and built it end to end: a warm, editorial identity and a compliant donation pipeline that a small campaign can actually run.",
       "The result is a fast, mostly-static site with real money moving through it — every contribution validated, recorded, and filing-ready — on a stack a solo maintainer can keep healthy.",
     ],
     stack: [
