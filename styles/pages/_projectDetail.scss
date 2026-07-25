@@ -1,20 +1,3 @@
-#body-projects-detail {
-  background-color: var(--primary-color);
-  min-height: 100vh;
-
-  .side-nav__content--social a {
-    &:hover,
-    &:active {
-      color: var(--secondary-color);
-    }
-  }
-}
-
-#header-projects-detail,
-#sideNav-projects-detail {
-  background-color: var(--secondary-color);
-}
-
 /* Warm cream used for body text on the teal background. */
 $ink: #f4f1ea;
 
@@ -136,8 +119,8 @@ $ink: #f4f1ea;
     }
 
     &:hover {
-      background-color: #ffa62b;
-      border-color: #ffa62b;
+      background-color: var(--secondary-color-strong);
+      border-color: var(--secondary-color-strong);
     }
   }
 }

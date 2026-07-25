@@ -1,26 +1,7 @@
-#body-contact {
-  background-color: var(--primary-color);
-  // min-height: 100vh;
-
-  .side-nav__content--social a {
-    &:hover,
-    &:active {
-      color: var(--secondary-color);
-    }
-  }
-}
-
-#header-contact {
-  background-color: var(--secondary-color);
-}
-
-#sideNav-contact {
-  background-color: var(--primary-color);
-}
-
 /********************* Contact Section**************************/
 section#contact {
-  height: 100vh;
+  /* See section#showcase: viewport minus header, no phantom scroll. */
+  height: calc(100vh - (3vw + 3vh));
   background-image: url("/background-yosemite.jpeg");
   background-size: cover;
   background-position: center;
@@ -32,23 +13,38 @@ section#contact {
 }
 
 .contact__form {
-  flex-basis: 40rem;
+  flex-basis: 44rem;
+  margin: 0 calc(1.5rem + 1.5vw) calc(1.5rem + 1.5vw) calc(1.5rem + 1.5vw);
 
   display: flex;
   flex-direction: column;
-  background-color: var(--tertiary-color-m);
+  background-color: rgba(1, 43, 45, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--line);
+  border-radius: 1.6rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.4);
+  overflow: hidden;
 }
 
 .contact__form input,
 .contact__form textarea {
-  color: white;
+  color: var(--ink);
+  /* "Indie Flower" is intentionally not loaded; the cursive fallback is the look. */
   font-family: "Indie Flower", cursive;
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
   padding: 2rem;
   background: transparent;
   border: none;
-  border-bottom: var(--secondary-color) solid 0.1rem;
+  border-bottom: 1px solid rgba(244, 241, 234, 0.22);
+  transition: border-color 0.25s ease;
+}
+
+.contact__form input:focus-visible,
+.contact__form textarea:focus-visible {
+  outline: none;
+  border-bottom-color: var(--secondary-color);
 }
 
 .contact__form textarea {
@@ -58,9 +54,32 @@ section#contact {
 input[type="submit"] {
   border: none;
   cursor: pointer;
+  margin: 2rem;
+  padding: 1.2rem 2.4rem;
+  border-radius: 100px;
+  background-color: var(--secondary-color);
+  color: #1c1a17;
+  font-family: var(--font-ibm-plex-sans), sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.14rem;
+  text-transform: uppercase;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+input[type="submit"]:hover:enabled {
+  background-color: var(--secondary-color-strong);
+  transform: translateY(-0.2rem);
+}
+
+input[type="submit"]:disabled {
+  cursor: default;
+  opacity: 0.65;
 }
 
 .contact__form input::placeholder,
 .contact__form textarea::placeholder {
-  color: white;
+  color: var(--ink-faint);
 }

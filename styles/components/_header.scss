@@ -1,7 +1,9 @@
+/* The header is transparent so every page shares the canvas color; a hairline
+   border grounds it against the content below. */
 header.header {
-  // background-color: var(--secondary-color);
   height: calc(3vw + 3vh);
   z-index: 2;
+  border-bottom: 1px solid var(--line);
 }
 
 nav#header__main-nav {
@@ -23,8 +25,21 @@ ul.header__main-nav--links li {
 
 ul.header__main-nav--links li a {
   position: relative;
-  padding: 0.2rem 0.6rem;
+  padding: 0.5rem 0.6rem;
   font-size: calc(1rem + 0.66667vw);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+ul.header__main-nav--links li a:link,
+ul.header__main-nav--links li a:visited {
+  color: var(--ink-soft);
+  transition: color 0.25s ease;
+}
+
+ul.header__main-nav--links li a:hover,
+ul.header__main-nav--links li a:active {
+  color: var(--ink);
 }
 
 ul.header__main-nav--links li a:link::before,
@@ -35,12 +50,13 @@ ul.header__main-nav--links li a:visited::after {
   position: absolute;
   left: 0;
   width: 100%;
-  height: 0.3rem;
-  background-color: white;
+  height: 0.2rem;
+  border-radius: 0.2rem;
+  background-color: var(--secondary-color);
 
   transform: scaleX(0);
 
-  transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
+  transition: transform 0.45s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 ul.header__main-nav--links li a:link::before,
@@ -64,7 +80,8 @@ ul.header__main-nav--links li a:active::after {
 }
 
 #active {
-  border-bottom: 3px solid white;
+  color: var(--secondary-color);
+  border-bottom: 0.2rem solid var(--secondary-color);
 }
 
 #active:hover::before,

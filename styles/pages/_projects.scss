@@ -1,16 +1,5 @@
-#body-projects {
-  background-color: var(--secondary-color);
-  min-height: 100vh;
-}
-
-#header-projects,
-#sideNav-projects {
-  background-color: var(--primary-color);
-}
-
 section#work {
   padding: calc(2.5rem + 2vw) calc(1.5rem + 2vw) calc(4rem + 3vw);
-  background-color: var(--secondary-color);
 }
 
 /********************* Intro **************************/
@@ -24,7 +13,7 @@ section#work {
     letter-spacing: 0.3rem;
     text-transform: uppercase;
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--secondary-color);
   }
 
   &--title {
@@ -38,7 +27,7 @@ section#work {
     font-size: 1.9rem;
     line-height: 1.6;
     max-width: 58rem;
-    color: rgba(255, 255, 255, 0.92);
+    color: var(--ink-soft);
   }
 }
 

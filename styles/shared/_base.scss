@@ -7,27 +7,38 @@
   box-sizing: border-box;
 }
 
-/******************* Utility Components ********************/
+/******************* Design Tokens ********************/
 :root {
   font-size: 62.5%;
+  color-scheme: dark;
 
   /************ Custom Properties ************/
 
-  /* Main Color */
+  /* Teal ramp: rail (darkest) -> canvas -> primary -> tertiary (brightest) */
+  --rail-color: #012b2d;
+  --canvas-color: #013b3d;
   --primary-color: #014d4e;
-  /* Secondary Color */
-  --secondary-color: #ff9408;
-  /* Secondary Color Modified */
-  --secondary-color-m: #ff94088e;
-  /* Tertiary color */
   --tertiary-color: #017374;
-  /* Tertiary color */
-  --tertiary-color-m: #01737498;
+
+  /* Amber accent, softened from the original #ff9408 */
+  --secondary-color: #e9a13b;
+  --secondary-color-strong: #f2b155;
+
+  /* Ink: warm cream on teal */
+  --ink: #f4f1ea;
+  --ink-soft: rgba(244, 241, 234, 0.78);
+  --ink-faint: rgba(244, 241, 234, 0.55);
+
+  /* Hairline borders on teal surfaces */
+  --line: rgba(244, 241, 234, 0.14);
 }
 
 .body {
   font-family: var(--font-ibm-plex-sans), sans-serif;
   line-height: 1.8;
+  background-color: var(--canvas-color);
+  color: var(--ink);
+  min-height: 100vh;
 
   display: flex;
 }
@@ -41,11 +52,26 @@ li {
 a:link,
 a:visited {
   text-decoration: none;
-  color: white;
+  color: var(--ink);
   font-size: 1.5rem;
 }
 
-.inline-link:hover,
-.inline-link:active {
-  font-size: 110%;
+::selection {
+  background-color: var(--secondary-color);
+  color: var(--rail-color);
+}
+
+:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

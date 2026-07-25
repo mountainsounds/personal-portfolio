@@ -11,6 +11,8 @@
 .skills__other--title {
   text-transform: uppercase;
   font-size: 3rem;
+  font-weight: 600;
+  color: #fff;
   margin-bottom: 2rem;
 }
 
@@ -18,7 +20,8 @@
 .skills__backend h4,
 .skills__other h4 {
   font-size: 2rem;
-  color: white;
+  font-weight: 500;
+  color: var(--ink-soft);
 }
 
 .skills__frontend--progress,
@@ -26,9 +29,10 @@
 .skills__other--progress {
   position: relative;
   display: block;
-  padding: 0.5rem;
+  padding: 0.4rem;
   border-radius: 3rem;
-  background-color: var(--primary-color);
+  background-color: var(--rail-color);
+  border: 1px solid var(--line);
   width: 100%;
   margin-bottom: 2rem;
 }
@@ -39,7 +43,11 @@
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 2rem;
+  height: 1.6rem;
   border-radius: 1rem 0 0 1rem;
-  background-color: var(--secondary-color);
+  background-image: linear-gradient(
+    90deg,
+    var(--secondary-color),
+    var(--secondary-color-strong)
+  );
 }
