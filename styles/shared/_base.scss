@@ -61,6 +61,14 @@ a:visited {
   color: var(--rail-color);
 }
 
+/* Full-bleed hero photo rendered via next/image `fill` (blur-up + srcset);
+   the section it sits in must be position: relative. */
+.hero-bg {
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
 /* Visually hidden, still read by screen readers (form labels etc). */
 .sr-only {
   position: absolute;

@@ -40,10 +40,11 @@ $ink: #f4f1ea;
   display: flex;
   align-items: center;
   gap: 0.9rem;
+  font-family: var(--font-ibm-plex-mono), monospace;
   font-size: 1.4rem;
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.08rem;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--secondary-color);
 
   &--dot {
@@ -52,7 +53,9 @@ $ink: #f4f1ea;
 }
 
 .project__title {
+  font-family: var(--font-ibm-plex-serif), Georgia, serif;
   font-size: calc(3.4rem + 2.5vw);
+  font-weight: 600;
   line-height: 1.05;
   color: #fff;
   margin: 1rem 0 1.4rem;
@@ -134,10 +137,11 @@ $ink: #f4f1ea;
   display: flex;
   align-items: center;
   gap: 1.4rem;
+  font-family: var(--font-ibm-plex-mono), monospace;
   font-size: 1.5rem;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.12rem;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--secondary-color);
   margin-bottom: 2.4rem;
 

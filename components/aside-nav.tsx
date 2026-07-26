@@ -33,6 +33,7 @@ export default function AsideNav({ page }: { page: PageId }) {
             <Image
               src={profilePic}
               alt="Picture of the author"
+              sizes="120px"
               style={{ width: "100%", height: "auto" }}
             />
           </div>

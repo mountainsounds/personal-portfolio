@@ -1,11 +1,10 @@
 /********************* Contact Section**************************/
 section#contact {
+  position: relative;
+  overflow: hidden;
+
   /* See section#showcase: viewport minus header, no phantom scroll. */
   height: calc(100vh - (3vw + 3vh));
-  background-image: url("/background-yosemite.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 
   display: flex;
   justify-content: flex-end;
@@ -13,6 +12,8 @@ section#contact {
 }
 
 .contact__form {
+  position: relative;
+  z-index: 1;
   flex-basis: 44rem;
   margin: 0 calc(1.5rem + 1.5vw) calc(1.5rem + 1.5vw) calc(1.5rem + 1.5vw);
 
@@ -25,12 +26,26 @@ section#contact {
   border-radius: 1.6rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.4);
   overflow: hidden;
+  animation: rise-contact 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes rise-contact {
+  0% {
+    opacity: 0;
+    transform: translateY(1.6rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .contact__form--header {
   padding: 2.4rem 2rem 0.6rem;
 
   h1 {
+    font-family: var(--font-ibm-plex-serif), Georgia, serif;
     font-size: 2.2rem;
     font-weight: 600;
     color: #fff;

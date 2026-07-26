@@ -1,0 +1,12 @@
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 2.4rem calc(1.5rem + 2vw) 2.8rem;
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--ink-faint);
+}
+
+.site-footer--sep {
+  color: var(--secondary-color);
+  margin: 0 0.9rem;
+}
