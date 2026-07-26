@@ -13,7 +13,15 @@ export type ContactSubmission = {
 
 export type ParseResult =
   | { ok: true; data: ContactSubmission }
-  | { ok: false; error: "missing_required" | "invalid_email" };
+  | { ok: false; error: "missing_required" | "invalid_email" | "too_long" };
+
+/** Shared with the form's client-side maxLength attributes. */
+export const FIELD_LIMITS = {
+  name: 200,
+  email: 320,
+  subject: 300,
+  message: 8000,
+} as const;
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -46,6 +54,14 @@ export function parseContactInput(body: unknown): ParseResult {
 
   if (!name || !email || !message) {
     return { ok: false, error: "missing_required" };
+  }
+  if (
+    name.length > FIELD_LIMITS.name ||
+    email.length > FIELD_LIMITS.email ||
+    subject.length > FIELD_LIMITS.subject ||
+    message.length > FIELD_LIMITS.message
+  ) {
+    return { ok: false, error: "too_long" };
   }
   if (!EMAIL_RE.test(email)) {
     return { ok: false, error: "invalid_email" };

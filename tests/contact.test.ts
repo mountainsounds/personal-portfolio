@@ -3,6 +3,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { POST } from "@/app/api/contact/route";
 import {
   escapeHtml,
+  FIELD_LIMITS,
   isSpam,
   parseContactInput,
   renderContactEmail,
@@ -55,6 +56,22 @@ describe("parseContactInput", () => {
   it("treats non-string fields as empty", () => {
     const result = parseContactInput({ ...VALID_BODY, name: 42 });
     expect(result).toEqual({ ok: false, error: "missing_required" });
+  });
+
+  it("rejects fields over their length limits", () => {
+    const result = parseContactInput({
+      ...VALID_BODY,
+      message: "x".repeat(FIELD_LIMITS.message + 1),
+    });
+    expect(result).toEqual({ ok: false, error: "too_long" });
+  });
+
+  it("accepts fields exactly at their length limits", () => {
+    const result = parseContactInput({
+      ...VALID_BODY,
+      message: "x".repeat(FIELD_LIMITS.message),
+    });
+    expect(result.ok).toBe(true);
   });
 });
 
