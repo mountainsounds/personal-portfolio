@@ -3,6 +3,10 @@ section#contact {
   position: relative;
   overflow: hidden;
 
+  /* Same stacking isolation as section#showcase: keep the form's z-index
+     from competing with the mobile header/drawer. */
+  isolation: isolate;
+
   /* See section#showcase: viewport minus header, no phantom scroll. */
   height: calc(100vh - (3vw + 3vh));
 

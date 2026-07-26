@@ -2,6 +2,10 @@ section#showcase {
   position: relative;
   overflow: hidden;
 
+  /* Contain the card/scrim z-indexes so they can never outrank the mobile
+     header (z-index 2) and its drawer in the root stacking context. */
+  isolation: isolate;
+
   /* Fill the viewport below the header exactly, so the landing has no
      phantom scroll. The mobile query restores 100vh (header overlays there). */
   height: calc(100vh - (3vw + 3vh));
