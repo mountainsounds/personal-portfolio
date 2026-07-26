@@ -1,11 +1,10 @@
 /********************* Contact Section**************************/
 section#contact {
+  position: relative;
+  overflow: hidden;
+
   /* See section#showcase: viewport minus header, no phantom scroll. */
   height: calc(100vh - (3vw + 3vh));
-  background-image: url("/background-yosemite.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 
   display: flex;
   justify-content: flex-end;
@@ -13,6 +12,8 @@ section#contact {
 }
 
 .contact__form {
+  position: relative;
+  z-index: 1;
   flex-basis: 44rem;
   margin: 0 calc(1.5rem + 1.5vw) calc(1.5rem + 1.5vw) calc(1.5rem + 1.5vw);
 

@@ -120,10 +120,13 @@
 
   /* Showcase / Hero Section */
   section#showcase {
-    background-position: 80%;
     align-items: flex-end;
     height: 100vh;
     height: 100svh;
+
+    .hero-bg {
+      object-position: 80% 50%;
+    }
   }
 
   section#contact {
