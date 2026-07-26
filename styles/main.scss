@@ -3,6 +3,7 @@
 // Components
 @use "./components/asideNav";
 @use "./components/header";
+@use "./components/footer";
 
 // Pages
 @use "./pages/homePage";
@@ -19,4 +20,12 @@
 main {
   flex: 1;
   min-height: 100vh;
+
+  /* Column flex so the footer hugs the bottom even when content is short. */
+  display: flex;
+  flex-direction: column;
+}
+
+main > .site-footer {
+  margin-top: auto;
 }
