@@ -3,21 +3,27 @@
 
   header.header {
     position: absolute;
+    border-bottom: none;
   }
 
+  /* Slide-in drawer, one glass treatment on every page. */
   nav#header__main-nav {
     width: 30rem;
     height: 100%;
     position: fixed;
     top: 0;
-    right: -30rem;
-    background-color: var(--secondary-color);
-    text-align: center;
+    right: -32rem;
+    background-color: rgba(1, 43, 45, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-left: 1px solid var(--line);
+    box-shadow: -2rem 0 5rem rgba(0, 0, 0, 0.45);
     z-index: 10;
+    transition: right 0.45s cubic-bezier(0.32, 0.72, 0.07, 1);
   }
 
-  .clicked {
-    left: 55%;
+  nav#header__main-nav.clicked {
+    right: 0;
   }
 
   .header__main-nav--hamburger {
@@ -27,7 +33,10 @@
     top: 2rem;
     right: 3rem;
     cursor: pointer;
-    background-color: var(--secondary-color);
+    background-color: rgba(1, 43, 45, 0.82);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--line);
     padding: 1rem;
     border-radius: 50%;
 
@@ -36,40 +45,17 @@
     justify-content: space-around;
   }
 
-  #header-about,
-  #header-projects {
-    .header__main-nav--hamburger {
-      background-color: var(--primary-color);
-    }
-
-    nav#header__main-nav {
-      background-color: var(--primary-color);
-    }
-
-    nav.clicked {
-      .header__main-nav--hamburger {
-        background-color: var(--secondary-color);
-      }
-    }
-  }
-
-  #header-skills,
-  #header-contact,
-  #header-home,
-  #header-projects-detail {
-    nav.clicked {
-      .header__main-nav--hamburger {
-        background-color: var(--primary-color);
-      }
-    }
-  }
-
   .line {
     width: 100%;
     height: 0.3rem;
-    background-color: white;
+    background-color: var(--ink);
     border-radius: 0.2rem;
     transition: all 0.4s ease-in-out;
+  }
+
+  /* The open state draws an amber X. */
+  .clicked .line {
+    background-color: var(--secondary-color);
   }
 
   ul.header__main-nav--links {
@@ -81,6 +67,10 @@
   ul.header__main-nav--links li {
     margin-bottom: 4vh;
     margin-left: 6vw;
+  }
+
+  ul.header__main-nav--links li a {
+    font-size: 1.9rem;
   }
 
   .clicked .line-1 {
@@ -132,5 +122,17 @@
   section#showcase {
     background-position: 80%;
     align-items: flex-end;
+    height: 100vh;
+    height: 100svh;
+  }
+
+  section#contact {
+    height: 100vh;
+    height: 100svh;
+  }
+
+  div.showcase__content {
+    margin-right: calc(1.5rem + 1.5vw);
+    margin-bottom: calc(2rem + 2vw);
   }
 }

@@ -5,7 +5,7 @@ import { IBM_Plex_Sans } from "next/font/google";
 import "@/styles/main.scss";
 
 const ibmPlexSans = IBM_Plex_Sans({
-  weight: "400",
+  weight: ["400", "500", "600"],
   subsets: ["latin"],
   display: "swap",
   variable: "--font-ibm-plex-sans",
@@ -21,10 +21,9 @@ export const metadata: Metadata = {
     "Portfolio of Zack Sawyer — software developer, climber, and outdoor enthusiast in Vermont.",
 };
 
-// The legacy site shipped `width=device-width` without initial-scale; keep it
-// so mobile rendering is bit-for-bit identical.
 export const viewport: Viewport = {
   width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
