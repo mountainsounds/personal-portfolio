@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     template: "%s | Zack Sawyer",
   },
   description:
-    "Portfolio of Zack Sawyer — software developer, climber, and outdoor enthusiast in Vermont.",
+    "Portfolio of Zack Sawyer — software developer, climber, and outdoor enthusiast.",
   twitter: {
     card: "summary_large_image",
   },

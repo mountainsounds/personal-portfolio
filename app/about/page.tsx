@@ -13,7 +13,7 @@ export default function AboutPage() {
     <SiteShell page="about">
       <section id="about-me">
         <header className="about__intro">
-          <p className="about__intro--eyebrow">Vermont, climbing, code</p>
+          <p className="about__intro--eyebrow">Climbing &amp; code</p>
           <h1 className="about__intro--title">About me</h1>
         </header>
         <div className="about-me__columns">
