@@ -19,15 +19,25 @@ export default function Header({ page }: { page: PageId }) {
 
   return (
     <header className="header" id={`header-${page}`}>
+      {/* Deliberately OUTSIDE the drawer <nav>: the drawer's backdrop-filter
+          makes it the containing block for fixed descendants (per spec; iOS
+          Safari enforces it), which would drag the button offscreen with it. */}
+      <button
+        type="button"
+        onClick={() => setHamburgerOpen((open) => !open)}
+        className={clsx(
+          "header__main-nav--hamburger",
+          hamburgerOpen && "clicked",
+        )}
+        aria-label={hamburgerOpen ? "Close menu" : "Open menu"}
+        aria-expanded={hamburgerOpen}
+        aria-controls="header__main-nav"
+      >
+        <div className="line line-1"></div>
+        <div className="line line-2"></div>
+        <div className="line line-3"></div>
+      </button>
       <nav className={clsx(hamburgerOpen && "clicked")} id="header__main-nav">
-        <div
-          onClick={() => setHamburgerOpen((open) => !open)}
-          className="header__main-nav--hamburger"
-        >
-          <div className="line line-1"></div>
-          <div className="line line-2"></div>
-          <div className="line line-3"></div>
-        </div>
         <ul className="header__main-nav--links">
           {navItems.map((item) => (
             <NavLink

@@ -10,6 +10,12 @@ nav#header__main-nav {
   height: 100%;
 }
 
+/* Mobile-only control; hidden here so the bare <button> never paints on
+   desktop. The 610px query switches it to flex. */
+.header__main-nav--hamburger {
+  display: none;
+}
+
 ul.header__main-nav--links {
   width: 100%;
   height: 100%;
