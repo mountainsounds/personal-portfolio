@@ -1,8 +1,10 @@
 import type { StaticImageData } from "next/image";
 
+import algoSearchFound from "@/public/projects/algo-search-found.jpg";
+import algoSearchNotebook from "@/public/projects/algo-search-notebook.jpg";
+import algoSieve from "@/public/projects/algo-sieve.jpg";
 import portfolioHome from "@/public/projects/portfolio-home.jpg";
 import portfolioSkills from "@/public/projects/portfolio-skills.jpg";
-import sieve from "@/public/projects/sieve.jpg";
 import wolkDonate from "@/public/projects/wolk-donate.jpg";
 import wolkHome from "@/public/projects/wolk-home.jpg";
 import wolkPriorities from "@/public/projects/wolk-priorities.jpg";
@@ -148,35 +150,52 @@ export const projects: Project[] = [
     sourceUrl: "https://github.com/mountainsounds/personal-portfolio",
   },
   {
-    slug: "sieve-of-eratosthenes",
-    title: "Sieve of Eratosthenes",
+    slug: "algo",
+    title: "algo.",
     tagline:
-      "An interactive visualization of the classic prime-finding algorithm.",
-    year: "2021",
-    role: "Development",
-    cardImage: sieve,
+      "Animated algorithm walkthroughs — a 2021 sieve demo grown into a small collection.",
+    year: "2021 – 2026",
+    role: "Design & Development",
+    cardImage: algoSieve,
     cardAlt:
-      "The sieve visualization: a grid of numbers with primes highlighted beside the algorithm's code",
+      "The algo. site running the Sieve of Eratosthenes: highlighted code beside a dark grid of numbers with a glowing cursor",
     overview: [
-      "An animated demonstration of the ancient Sieve of Eratosthenes. Enter an upper bound and watch the sieve step through the grid, eliminating multiples in real time while the driving code is highlighted alongside it.",
+      "An animated-algorithms site at algo.mtnsounds.com. Each algorithm gets its own visualization, a plain-language narration line, and the real code highlighted line by line as it runs — the Sieve of Eratosthenes first, binary search second, with more to come.",
+      "It began as a 2021 sieve demo. The 2026 rebuild replaced the original's fragile timers with pure step generators behind a cancellable player, and gave the site two full themes with their own motion personalities: Signal, a dark lab of LED tiles and glow, and Notebook, warm graph paper marked up in ink and red pencil.",
     ],
-    stack: ["JavaScript (ES6+)", "DOM Manipulation", "Concurrency", "PrismJS"],
+    stack: ["Vite 7", "TypeScript", "PrismJS", "Vitest", "Vercel"],
     highlights: [
       {
-        title: "Animation as explanation",
-        body: "The algorithm is stepped on a timer so each elimination is visible, turning an abstract procedure into something you can actually watch unfold across the grid.",
+        title: "Runs that can't go stale",
+        body: "Algorithms are pure functions that emit a list of steps; an epoch-guarded player applies them to the page. Pause, reset, and re-run just swap the list — a late timer from an old run can never touch the DOM, which was the failure mode of the 2021 version.",
       },
       {
-        title: "The code, live alongside",
-        body: "PrismJS renders the real algorithm next to the visualization, syntax-highlighted, so the demo doubles as a readable reference for how the sieve works.",
+        title: "Two themes, drawn differently",
+        body: "Every color, texture, and motion value is a token, so Signal and Notebook share one structure with different personalities. Notebook draws real SVG strike lines and pencil circles with several hand-drawn path variants; Signal speaks in glow and pulse. Switching mid-run is safe, and the choice persists without a flash on reload.",
+      },
+      {
+        title: "Each algorithm owns its visual",
+        body: "A registry carries an algorithm's step type, narration, pacing, code listing, controls, and view together. The sieve strikes numbers in a grid; binary search collapses a strip of bars under a target line, discarding half the window with every probe. Each gets its own accent color, so the collection reads as a set.",
       },
     ],
     gallery: [
       {
-        src: sieve,
-        alt: "The running sieve: highlighted algorithm on the left, a grid of numbers with primes marked on the right",
+        src: algoSieve,
+        alt: "The Sieve of Eratosthenes in the dark Signal theme: highlighted code beside a grid of numbers with a glowing cyan cursor ring",
         caption:
-          "The sieve mid-run — primes emerging in the grid as the highlighted code executes.",
+          "Algorithm 01 in Signal — the sieve mid-run, cursor on the current prime.",
+      },
+      {
+        src: algoSearchNotebook,
+        alt: "Binary search in the Notebook theme: pencil-shaded bars under a red dashed target line on graph paper, discarded bars scratched out",
+        caption:
+          "Algorithm 02 in Notebook — discarded halves scratched out in pencil, the target ruled in red.",
+      },
+      {
+        src: algoSearchFound,
+        alt: "Binary search in Signal at the moment the target is found: one bar lit bright green where it meets the target line",
+        caption:
+          "Found — the matching bar lights up where the staircase meets the target line.",
       },
     ],
     liveUrl: "https://algo.mtnsounds.com/",
