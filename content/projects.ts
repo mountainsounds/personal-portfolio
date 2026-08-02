@@ -179,7 +179,7 @@ export const projects: Project[] = [
           "The sieve mid-run — primes emerging in the grid as the highlighted code executes.",
       },
     ],
-    liveUrl: "https://mountainsounds.github.io/sieveAlgoDemo/",
+    liveUrl: "https://algo.mtnsounds.com/",
     sourceUrl: "https://github.com/mountainsounds/sieveAlgoDemo",
   },
 ];
