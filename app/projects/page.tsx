@@ -18,8 +18,7 @@ export default function ProjectsPage() {
           <p className="work__intro--eyebrow">Selected work</p>
           <h1 className="work__intro--title">Projects</h1>
           <p className="work__intro--lede">
-            A few things I&apos;ve designed and built — from a full-stack
-            campaign platform to small interactive experiments.
+            A few things I&apos;ve designed and built outside the day job.
           </p>
         </header>
 
