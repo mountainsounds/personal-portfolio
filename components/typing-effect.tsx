@@ -2,13 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const WORDS = [
-  "Developer",
-  "Tech Lover",
-  "Team Player",
-  "Outdoor Enthusiast",
-  "Climber",
-];
+const WORDS = ["Climber", "Coder", "Coach"];
 
 // Timings preserved from the original helpers/typingEffect.js.
 const TYPE_MS = 300;
