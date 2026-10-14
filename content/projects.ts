@@ -45,14 +45,14 @@ export const projects: Project[] = [
     slug: "wolk-for-senate",
     title: "Wolk for Senate",
     tagline:
-      "A full-stack campaign site for an independent Vermont State Senate candidate — donations, compliance, and all.",
+      "The campaign website for Dave Wolk's 2026 run for Vermont State Senate. It takes donations too.",
     year: "2026",
     role: "Design & Full-Stack Development",
     cardImage: wolkHome,
     cardAlt: "The Wolk for Senate homepage hero",
     overview: [
-      "A campaign website for Dave Wolk, running as an Independent for the Vermont State Senate in Rutland County. I designed and built it end to end: a warm, editorial identity and a compliant donation pipeline that a small campaign can actually run.",
-      "The result is a fast, mostly-static site with real money moving through it — every contribution validated, recorded, and filing-ready — on a stack a solo maintainer can keep healthy.",
+      "This is the 2026 campaign website for Dave Wolk, an Independent candidate for Vermont State Senate in Rutland County. I designed and built all of it.",
+      "Donations are the part that had to be right. There are rules about who can give and how much, and the campaign has to report what it takes in.",
     ],
     stack: [
       "Next.js 16",
@@ -68,39 +68,34 @@ export const projects: Project[] = [
     ],
     highlights: [
       {
-        title: "Compliant donations, enforced on the server",
-        body: "Stripe Checkout is wired to a Neon Postgres ledger, but the rules live server-side and never trust the client: Vermont's $1,940 contribution cap, the $100 disclosure threshold, and three legal attestations are all validated before a charge. A signature-verified webhook idempotently records each contribution — and backstops over-cap payments rather than dropping money.",
+        title: "Campaign finance rules",
+        body: "Before any charge is made, the server checks the donation against the law. That means Vermont's $1,940 cap per person, the $100 threshold where a donor's name and address are required, and three statements every donor has to confirm.",
       },
       {
-        title: "An editorial identity",
-        body: 'A single warm "parchment" theme in Castleton green (Pantone 343), with a variable serif for headlines and a mono accent for labels. The voice is first-person in the body, third-person in the chrome — and the whole thing was audited against WCAG across every page.',
+        title: "A CSV for the filing",
+        body: "A password-protected admin page exports every contribution as a CSV, in the column order Vermont's filing uses. Nobody on the campaign has to retype anything.",
       },
       {
-        title: "Filing-ready admin export",
-        body: "A gated /admin route streams every contribution as a CSV in Vermont's exact filing column order, behind a constant-time credential check with no database session. The route 404s entirely until it's configured — the export simply doesn't exist to the public.",
-      },
-      {
-        title: "Everything ships through CI",
-        body: "No change reaches production without a pull request that passes type-checking, Vitest unit tests, and Playwright end-to-end tests running against the live Vercel preview deploy.",
+        title: "The design",
+        body: "The background is a warm off-white. The green is Castleton green, the color of the university where Dave was president. Headlines are set in a serif, and the body copy is in his own first-person voice. Every page was checked against WCAG.",
       },
     ],
     gallery: [
       {
         src: wolkHome,
         alt: "Homepage hero: 'A steady hand for Rutland' beside a portrait of the candidate",
-        caption: "The homepage — a warm parchment identity in Castleton green.",
+        caption: "The home page.",
       },
       {
         src: wolkPriorities,
-        alt: "The Priorities page with an editorial headline and a photo of the candidate with constituents",
-        caption:
-          "Priorities: an editorial layout that leads with the person, not a wall of policy.",
+        alt: "The Priorities page: the headline 'There are so many issues that matter' above a photo of Dave Wolk talking with two people in front of a brick building",
+        caption: "The Priorities page, which opens with three issues.",
       },
       {
         src: wolkDonate,
         alt: "The donation page with contribution amount options over a green background",
         caption:
-          "The donation flow — Stripe Checkout with Vermont compliance enforced behind it.",
+          "The donation page. The form and the legal statements sit below the amounts.",
       },
     ],
     liveUrl: "https://wolkforsenate.com/",
@@ -109,41 +104,39 @@ export const projects: Project[] = [
   {
     slug: "personal-portfolio",
     title: "This Portfolio",
-    tagline: "The site you're on — rebuilt on the modern Next.js App Router.",
+    tagline:
+      "The site you're on. I built it in 2021 and rebuilt it in 2026 on Next.js.",
     year: "2021 – 2026",
     role: "Design & Development",
     cardImage: portfolioHome,
-    cardAlt: "The mtnsounds.com homepage over a mountain summit photo",
+    cardAlt:
+      "The mtnsounds.com home page: the name Zack Sawyer on a teal card over a photo of two climbers on a snowy summit ridge",
     overview: [
-      "This very site. It began as a hand-coded static page, became a React/Next.js app, and was most recently rebuilt on the Next.js App Router with React 19 and strict TypeScript.",
-      "It's server-rendered by default, with small islands of client JavaScript only where something actually needs to move.",
+      "I started this site in 2021, while I was learning to code. The first version was a static page written by hand. It turned into a React and Next.js app after that, and in 2026 I rebuilt it on the Next.js App Router with React 19 and TypeScript. That's the version you're looking at.",
     ],
     stack: ["Next.js 16", "React 19", "TypeScript", "Sass", "Resend", "Vercel"],
     highlights: [
       {
-        title: "Server-first architecture",
-        body: "Every page prerenders as static HTML. Client JavaScript is limited to three islands — the mobile nav, the typing effect on this page's cousin, and the contact form — which keeps the site quick to load and cheap to serve.",
+        title: "Mostly static",
+        body: "Every page is static HTML. Only three pieces are interactive: the mobile menu, the typing line on the home page, and the contact form.",
       },
       {
-        title: "Email without a backend",
-        body: "The contact form posts to a typed route handler that sends through Resend, with a honeypot for bots and reply-to wired to the sender. No database, no third-party form widget.",
-      },
-      {
-        title: "Content as data",
-        body: "Projects and skills live in typed modules, so adding a project like this one is a data change — not a template rewrite. The screenshots on this page were captured and optimized as part of the same pass.",
+        title: "The contact form",
+        body: "It posts to a route handler that emails me through Resend. There's no database to look after.",
       },
     ],
     gallery: [
       {
         src: portfolioHome,
-        alt: "The portfolio homepage with the name Zack Sawyer over a mountain-summit photo",
-        caption: "The landing hero, with an animated role typer.",
+        alt: "The home page: the name Zack Sawyer on a translucent teal card, over a photo of two climbers on a snowy summit ridge above the clouds. A line under the name reads 'Climber'.",
+        caption:
+          "The home page. The line under my name types out a few words in turn.",
       },
       {
         src: portfolioSkills,
-        alt: "The skills page showing frontend, backend, and tooling proficiency bars",
+        alt: "The skills page: a short intro, then a section called 'The day job' with four stages, Interface, Services, Data & events, and Insight, each with a description and technology chips",
         caption:
-          "The skills page — three columns of animated proficiency bars.",
+          "The skills page, which walks through the stack I use at work.",
       },
     ],
     liveUrl: "https://mtnsounds.com/",
@@ -153,29 +146,29 @@ export const projects: Project[] = [
     slug: "algo",
     title: "algo.",
     tagline:
-      "Animated algorithm walkthroughs — a 2021 sieve demo grown into a small collection.",
+      "Animated walkthroughs of classic algorithms, with the code highlighted line by line as they run.",
     year: "2021 – 2026",
     role: "Design & Development",
     cardImage: algoSieve,
     cardAlt:
       "The algo. site running the Sieve of Eratosthenes: highlighted code beside a dark grid of numbers with a glowing cursor",
     overview: [
-      "An animated-algorithms site at algo.mtnsounds.com. Each algorithm gets its own visualization, a plain-language narration line, and the real code highlighted line by line as it runs — the Sieve of Eratosthenes first, binary search second, with more to come.",
-      "It began as a 2021 sieve demo. The 2026 rebuild replaced the original's fragile timers with pure step generators behind a cancellable player, and gave the site two full themes with their own motion personalities: Signal, a dark lab of LED tiles and glow, and Notebook, warm graph paper marked up in ink and red pencil.",
+      "This is a site where you can watch classic algorithms run. There are five so far: the Sieve of Eratosthenes, binary search, insertion sort, merge sort, and quicksort. Each one has an animation, a line of narration for the current step, and the code beside it with the running line highlighted.",
+      "It began in 2021 as a single sieve demo in vanilla JavaScript. In 2026 I rebuilt it in TypeScript with Vite and no framework, and I've been adding algorithms since. I kept the pacing slow on purpose, and you can pause it and go one step at a time.",
     ],
     stack: ["Vite 7", "TypeScript", "PrismJS", "Vitest", "Vercel"],
     highlights: [
       {
-        title: "Runs that can't go stale",
-        body: "Algorithms are pure functions that emit a list of steps; an epoch-guarded player applies them to the page. Pause, reset, and re-run just swap the list — a late timer from an old run can never touch the DOM, which was the failure mode of the 2021 version.",
+        title: "A list of steps",
+        body: "The 2021 version animated from inside the algorithm's loops, sleeping between iterations. Nothing could stop a run once it started, so a reset left the old loop going. Now each algorithm returns a list of steps and a small player walks it. That's what makes pause, step, and reset work.",
       },
       {
-        title: "Two themes, drawn differently",
-        body: "Every color, texture, and motion value is a token, so Signal and Notebook share one structure with different personalities. Notebook draws real SVG strike lines and pencil circles with several hand-drawn path variants; Signal speaks in glow and pulse. Switching mid-run is safe, and the choice persists without a flash on reload.",
+        title: "Three languages, one run",
+        body: "The code panel shows each algorithm in JavaScript, Python, or Java. The steps are the same in all three. Each listing says which of its lines a step belongs to, so the highlight lands on the right line in whichever one you pick.",
       },
       {
-        title: "Each algorithm owns its visual",
-        body: "A registry carries an algorithm's step type, narration, pacing, code listing, controls, and view together. The sieve strikes numbers in a grid; binary search collapses a strip of bars under a target line, discarding half the window with every probe. Each gets its own accent color, so the collection reads as a set.",
+        title: "Wrapping code on a phone",
+        body: "On a phone the longer lines of code don't fit. A browser wraps at the last space that fits, which can strand a lone brace on its own row. I wrote a small line breaker that scores each place a line could break and picks the one a person would.",
       },
     ],
     gallery: [
@@ -183,19 +176,19 @@ export const projects: Project[] = [
         src: algoSieve,
         alt: "The Sieve of Eratosthenes in the dark Signal theme: highlighted code beside a grid of numbers with a glowing cyan cursor ring",
         caption:
-          "Algorithm 01 in Signal — the sieve mid-run, cursor on the current prime.",
+          "The sieve mid-run in Signal, the dark theme, with the ring on the current prime.",
       },
       {
         src: algoSearchNotebook,
-        alt: "Binary search in the Notebook theme: pencil-shaded bars under a red dashed target line on graph paper, discarded bars scratched out",
+        alt: "Binary search in the Notebook theme: pencil-shaded bars crossed by a red dashed target line on graph paper, discarded bars scratched out",
         caption:
-          "Algorithm 02 in Notebook — discarded halves scratched out in pencil, the target ruled in red.",
+          "Binary search in Notebook, the light theme, with discarded bars scratched out in pencil and the target ruled in red.",
       },
       {
         src: algoSearchFound,
         alt: "Binary search in Signal at the moment the target is found: one bar lit bright green where it meets the target line",
         caption:
-          "Found — the matching bar lights up where the staircase meets the target line.",
+          "Binary search in Signal at the moment it finds the target, with one bar lit green.",
       },
     ],
     liveUrl: "https://algo.mtnsounds.com/",
