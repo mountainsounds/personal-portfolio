@@ -23,7 +23,8 @@ export const FIELD_LIMITS = {
   message: 8000,
 } as const;
 
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+/** Loose "looks like an email" check. Also used by the Stork report endpoint. */
+export const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const str = (v: unknown): string => (typeof v === "string" ? v.trim() : "");
 
